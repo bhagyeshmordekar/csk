@@ -1,0 +1,21 @@
+#include<DHT.h>
+DHT dht(2,DHT11);
+int temp;
+int hum;
+void setup() {
+// put your setup code here, to run once:
+Serial.begin(9600);
+dht.begin();
+}
+void loop() {
+// put your main code here, to run repeatedly:
+delay(2000);
+temp = dht.readTemperature();
+hum = dht.readHumidity();
+Serial.print("Temperature:");
+Serial.print(temp);
+Serial.print("°C")
+Serial.print("Humidity");
+Serial.print(hum);
+Serial.print("%");
+}
