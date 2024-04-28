@@ -1,0 +1,18 @@
+int IRPin = 2;
+int valvePin = 13;
+int IRValue ;
+void setup () {
+pinMode (IRPin,INPUT);
+pinMode (valvePin,OUTPUT);
+}
+void loop() {
+IRValue = digitalRead (IRPin);
+if (IRValue == LOW)
+{
+digitalWrite(valvePin, HIGH);
+}
+else
+{
+digitalWrite(valvePin, LOW);
+}
+}
