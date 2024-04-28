@@ -1,0 +1,10 @@
+int pirsensor = 2 ;
+int readValue ;
+void setup ( ) {
+pinMode (pirsensor , INPUT) ;
+Serial.begin(9600) ;
+}
+void loop ( ) {
+readValue = digitalRead (pirsensor) ;
+Serial.println(readValue) ;
+}
